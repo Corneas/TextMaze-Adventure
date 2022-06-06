@@ -19,8 +19,8 @@
     <Filter Include="헤더 파일\Miro">
       <UniqueIdentifier>{131c3a7c-51fb-41b5-80cf-e06eea30fcc2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\TextRPG">
-      <UniqueIdentifier>{78daa972-57f7-47b0-ba74-cd67890a73e1}</UniqueIdentifier>
+    <Filter Include="소스 파일\TextRpg">
+      <UniqueIdentifier>{43784e4d-3819-4dc4-8073-1375628b66d8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +35,9 @@
     </ClCompile>
     <ClCompile Include="miroGamePlay.cpp">
       <Filter>소스 파일\Miro</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRPG.cpp">
+      <Filter>소스 파일\TextRpg</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

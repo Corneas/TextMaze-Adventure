@@ -143,6 +143,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="miro.cpp" />
     <ClCompile Include="miroGamePlay.cpp" />
+    <ClCompile Include="TextRPG.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h" />
