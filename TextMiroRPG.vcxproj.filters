@@ -50,5 +50,8 @@
     <ClInclude Include="miroGamePlay.h">
       <Filter>헤더 파일\Miro</Filter>
     </ClInclude>
+    <ClInclude Include="TextRPG.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

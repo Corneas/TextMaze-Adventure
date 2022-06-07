@@ -149,6 +149,7 @@
     <ClInclude Include="console.h" />
     <ClInclude Include="miro.h" />
     <ClInclude Include="miroGamePlay.h" />
+    <ClInclude Include="TextRPG.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

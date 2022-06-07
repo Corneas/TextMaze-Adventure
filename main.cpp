@@ -1,6 +1,7 @@
 #include "console.h"
 #include "miro.h"
 #include "miroGamePlay.h"
+#include "TextRPG.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main(void) {
 
 	system("cls");
 	
-	cout << "MiroTextRPG게임 시작합니다!" << endl << endl;
+	cout << "TextMaze Adventure 시작합니다!" << endl << endl;
 	cout << "====================게임룰====================" << endl;
 	cout << "미로게임과 TextRPG로 구성되어있습니다." << endl;
 	cout << "처음에는 미로게임이 나오며, 미로게임을 클리어하면 클리어 시간에 따라 점수가 부여됩니다!" << endl;
@@ -57,7 +58,7 @@ int main(void) {
 			break;
 		}
 		else if (gameSelect == TEXTRPG) {
-
+			TextRPG(totalScore);
 			break;
 		}
 		else {

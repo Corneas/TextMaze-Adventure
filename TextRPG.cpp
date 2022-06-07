@@ -1,6 +1,8 @@
+#pragma once
 #include <iostream>
 #include <time.h>
 #include <string>
+#include "console.h"
 
 using namespace std;
 
@@ -81,4 +83,23 @@ void TextRPG(int totalScore) { // class를 사용하여 monster 종류 구분하기
 	}
 
 	//CreateMonster(monsterHP, monsterAtk, monsterDef);
+
+	while (true) {
+		system("cls");
+		if (playerHp <= 0) {
+			cout << "사망" << endl;
+		}
+
+		cout << "몬스터와의 전투 시작!" << endl;
+		cout << "플레이어 정보" << endl;
+		cout << "Hp : " << playerHp << endl;
+		cout << "Atk : " << playerAtk << endl;
+		cout << "Def : " << playerDef << endl << endl;
+
+		cout << "몬스터 정보" << endl;
+		cout << "Hp : " << monsterHp << endl;
+		cout << "Atk : " << monsterAtk << endl;
+		cout << "Def : " << monsterDef << endl << endl;
+	}
+
 }
