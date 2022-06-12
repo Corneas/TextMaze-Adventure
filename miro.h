@@ -13,17 +13,13 @@ typedef struct _player {
 	_pos tPos;
 }PLAYER, *PPLAYER;
 
+void Miro(int& totalScore);
+
 void SetMazeStage1(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos);
-void OutPutMazeStage1(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
 void SetMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos);
-void OutPutMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
+void OutPutMaze(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
 
-void MovePlayer(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
-void MoveUp(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
-void MoveDown(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
-void MoveLeft(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
-void MoveRight(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
-
+//void OutPutMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
 void MovePlayer(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
 void MoveUp(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
 void MoveDown(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);

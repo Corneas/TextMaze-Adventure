@@ -45,24 +45,6 @@ void SetMazeStage1(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, P
 	}
 
 }
-void OutPutMazeStage1(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer) {
-	for (int i = 0; i < HEIGHT; i++) {
-		for (int j = 0; j < WEIGHT; j++) {
-			if (pPlayer->tPos.x == j && pPlayer->tPos.y == i)
-				cout << "¡Ù";
-			else if (Maze[i][j] == '0')
-				cout << "  ";
-			else if (Maze[i][j] == '1')
-				cout << "¡á";
-			else if (Maze[i][j] == '2')
-				cout << "¡Ú";
-			else if (Maze[i][j] == '3')
-				cout << "¡Ý";
-		}
-			cout << endl;
-	}
-}
-
 void SetMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos) {
 	int stage2 = rand() % 2;
 	if (stage2 == 0) {
@@ -115,7 +97,8 @@ void SetMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, P
 	}
 
 }
-void OutPutMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer) {
+
+void OutPutMaze(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer) {
 	for (int i = 0; i < HEIGHT; i++) {
 		for (int j = 0; j < WEIGHT; j++) {
 			if (pPlayer->tPos.x == j && pPlayer->tPos.y == i)
@@ -129,9 +112,26 @@ void OutPutMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer) {
 			else if (Maze[i][j] == '3')
 				cout << "¡Ý";
 		}
-		cout << endl;
+			cout << endl;
 	}
 }
+//void OutPutMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer) {
+//	for (int i = 0; i < HEIGHT; i++) {
+//		for (int j = 0; j < WEIGHT; j++) {
+//			if (pPlayer->tPos.x == j && pPlayer->tPos.y == i)
+//				cout << "¡Ù";
+//			else if (Maze[i][j] == '0')
+//				cout << "  ";
+//			else if (Maze[i][j] == '1')
+//				cout << "¡á";
+//			else if (Maze[i][j] == '2')
+//				cout << "¡Ú";
+//			else if (Maze[i][j] == '3')
+//				cout << "¡Ý";
+//		}
+//		cout << endl;
+//	}
+//}
 
 #pragma region MovePlayer
 void MovePlayer(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer) {

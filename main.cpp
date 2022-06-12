@@ -11,6 +11,8 @@ enum gameType
 	TEXTRPG = 2
 };
 
+void GameSelect(int &totalScore);
+
 int main(void) {
 	POS tStartpos;
 	POS tEndpos;
@@ -19,8 +21,7 @@ int main(void) {
 	srand((unsigned int)time(NULL));
 
 	int totalScore = 0;
-
-	int gameSelect = 0;
+	int miro = 1;
 
 	cout << "게임을 시작하려면 아무 키나 눌러주세요.";
 	char getch = _getch();
@@ -43,12 +44,19 @@ int main(void) {
 	system("cls");
 
 	Miro1(totalScore);
+	
+	GameSelect(totalScore);
+}
+
+void GameSelect(int &totalScore) {
+	int gameSelect = 0;
 
 	cout << "현재 스코어 : " << totalScore << endl;
 	cout << endl << "게임을 선택해주세요!" << endl;
 	cout << "1 : 미로게임을 계속 진행한다. (score + 100)" << endl;
 	cout << "2 : TextRPG게임으로 넘어간다." << endl;
 	cout << "숫자를 입력해주세요! : ";
+
 
 	while (true) {
 		cin >> gameSelect;
@@ -67,12 +75,4 @@ int main(void) {
 		}
 
 	}
-
-	cout << "현재 스코어 : " << totalScore << endl;
-	cout << endl << "게임을 선택해주세요!" << endl;
-	cout << "1 : 미로게임을 계속 진행한다. (score + 100)" << endl;
-	cout << "2 : TextRPG게임으로 넘어간다." << endl;
-	cout << "숫자를 입력해주세요! : ";
-	cin >> gameSelect;
-	
 }

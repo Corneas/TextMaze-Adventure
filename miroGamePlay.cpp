@@ -11,6 +11,20 @@ POS tStartpos;
 POS tEndpos;
 PLAYER tPlayer;
 
+void Miro(int &totalScore, int miro) {
+
+	int score = totalScore;
+
+	switch (miro)
+	{
+	case 2:
+		Miro2(score);
+		break;
+	default:
+		break;
+	}
+
+}
 
 void Miro1(int &totalScore) {
 
@@ -22,7 +36,8 @@ void Miro1(int &totalScore) {
 	while (true) {
 		system("cls");
 		gotoxy(0, 0);
-		OutPutMazeStage1(StrmazeStage1, &tPlayer);
+		//OutPutMazeStage1(StrmazeStage1, &tPlayer);
+		OutPutMaze(StrmazeStage1, &tPlayer);
 		cout << endl << "q : 종료" << endl;
 		cout << "방향키로 움직여 ◎ 지점에 도착하세요." << endl;
 		if (tPlayer.tPos.x == tEndpos.x && tPlayer.tPos.y == tEndpos.y) {
@@ -39,9 +54,11 @@ void Miro1(int &totalScore) {
 		}
 		MovePlayer(StrmazeStage1, &tPlayer);
 	}
+
+	
 }
 
-void Miro2(int &totalScore)
+void Miro2(int& totalScore)
 {
 	time_t start, end;
 	start = time(NULL);
@@ -50,7 +67,8 @@ void Miro2(int &totalScore)
 	while (true) {
 		system("cls");
 		gotoxy(0, 0);
-		OutPutMazeStage2(StrmazeStage2, &tPlayer);
+		//OutPutMazeStage2(StrmazeStage2, &tPlayer);
+		OutPutMaze(StrmazeStage2, &tPlayer);
 		cout << endl << "q : 종료" << endl;
 		cout << "방향키로 움직여 ◎ 지점에 도착하세요." << endl;
 		if (tPlayer.tPos.x == tEndpos.x && tPlayer.tPos.y == tEndpos.y) {
