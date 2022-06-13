@@ -1,7 +1,7 @@
 #include "console.h"
 #include "miro.h"
 #include "miroGamePlay.h"
-#include "TextRPG.h"
+#include "TextRPGPlay.h"
 
 using namespace std;
 
@@ -11,7 +11,7 @@ enum gameType
 	TEXTRPG = 2
 };
 
-void GameSelect(int &totalScore);
+void GameSelect(int &totalScore, int &stage);
 
 int main(void) {
 	POS tStartpos;
@@ -21,7 +21,8 @@ int main(void) {
 	srand((unsigned int)time(NULL));
 
 	int totalScore = 0;
-	int miro = 1;
+	int stage = 1;
+	int itemPart[6] = { 0,0,0,0,0 };
 
 	cout << "게임을 시작하려면 아무 키나 눌러주세요.";
 	char getch = _getch();
@@ -44,11 +45,13 @@ int main(void) {
 	system("cls");
 
 	Miro1(totalScore);
-	
-	GameSelect(totalScore);
+
+	while (stage < 5) {
+		GameSelect(totalScore, stage);
+	}
 }
 
-void GameSelect(int &totalScore) {
+void GameSelect(int &totalScore, int &stage ) {
 	int gameSelect = 0;
 
 	cout << "현재 스코어 : " << totalScore << endl;
@@ -62,11 +65,11 @@ void GameSelect(int &totalScore) {
 		cin >> gameSelect;
 		if (gameSelect == MIRO) {
 			totalScore += 100;
-			Miro2(totalScore);
+			Miro(totalScore, stage);
 			break;
 		}
 		else if (gameSelect == TEXTRPG) {
-			TextRPG(totalScore);
+			TextRPG(totalScore, stage);
 			break;
 		}
 		else {

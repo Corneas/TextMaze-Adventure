@@ -36,7 +36,7 @@
     <ClCompile Include="miroGamePlay.cpp">
       <Filter>소스 파일\Miro</Filter>
     </ClCompile>
-    <ClCompile Include="TextRPG.cpp">
+    <ClCompile Include="TextRPGPlay.cpp">
       <Filter>소스 파일\TextRpg</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,7 +50,7 @@
     <ClInclude Include="miroGamePlay.h">
       <Filter>헤더 파일\Miro</Filter>
     </ClInclude>
-    <ClInclude Include="TextRPG.h">
+    <ClInclude Include="TextRPGPlay.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

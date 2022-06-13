@@ -1,8 +1,6 @@
 #pragma once
-#include <iostream>
-#include <time.h>
-#include <string>
 #include "console.h"
+#include "miroGamePlay.h"
 
 using namespace std;
 
@@ -14,7 +12,7 @@ enum monsterType {
 	monster5
 };
 
-void TextRPG(int totalScore) { // class를 사용하여 monster 종류 구분하기
+void TextRPG(int &totalScore, int &stage) { // class를 사용하여 monster 종류 구분하기
 
 	int playerHp = totalScore, playerAtk = 20, playerDef = 0;
 	int monsterHp = 0, monsterAtk = 0, monsterDef = 0;
@@ -95,9 +93,9 @@ void TextRPG(int totalScore) { // class를 사용하여 monster 종류 구분하기
 
 		if (playerAct == 1) {
 			cout << "플레이어의 공격!" << endl;
-			cout << "입힌 데미지 : " << (monsterAtk - playerDef) << endl;
+			cout << "입힌 데미지 : " << (playerAtk - monsterDef) << endl;
 			cout << "몬스터의 공격!" << endl;
-			cout << "입은 데미지 : " << (playerAtk - monsterDef) << endl;
+			cout << "입은 데미지 : " << (monsterAtk - playerDef) << endl;
 			playerHp -= (monsterAtk - playerDef);
 			monsterHp -= (playerAtk - monsterDef);
 			Sleep(1000);
@@ -112,7 +110,12 @@ void TextRPG(int totalScore) { // class를 사용하여 monster 종류 구분하기
 				cout << "입힌 데미지 : " << (monsterAtk - monsterDef) << endl;
 				monsterHp -= (monsterAtk - monsterDef);
 			}
-			else if (monsterAtk - monsterDef < 0) {
+			else if (monsterAtk - monsterDef == 0) {
+				cout << "아닛?! 적의 방어력이 적의 공격력이랑 같아서 효과가 없잖아!" << endl;
+				cout << "입힌 데미지 : 0" << endl;
+			}
+			else if (monsterAtk - monsterDef <= 0) {
+				cout << "적의 방어력이 적의 공격력보다 높아서 데미지가 안들어가!" << endl;
 				cout << "입힌 데미지 : 0" << endl;
 			}
 			reflectCount--;
@@ -142,13 +145,18 @@ void TextRPG(int totalScore) { // class를 사용하여 monster 종류 구분하기
  		}
 
 		if (monsterHp <= 0) {
-			cout << "플레이어의 승리!" << endl;
+			cout << endl << "플레이어의 승리!" << endl;
 			cout << itemPart << "을(를) 획득하였습니다!" << endl;
-			char getch = _getch();
-			if (getch)
-				break;
+			for (int i = 2; i > 0; --i) {
+				cout << "\r" << i << "초 후 미로게임으로 넘어갑니다." << endl;
+				Sleep(1000);
+			}
+			//cout << endl << "2초 후 미로게임으로 넘어갑니다." << endl;
+			//Sleep(1000);
+			//cout << endl << "1초 후 미로게임으로 넘어갑니다." << endl;
+			//Sleep(1000);
+			Miro(totalScore, stage);
 			break;
 		}
 	}
-
 }

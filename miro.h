@@ -13,8 +13,6 @@ typedef struct _player {
 	_pos tPos;
 }PLAYER, *PPLAYER;
 
-void Miro(int& totalScore);
-
 void SetMazeStage1(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos);
 void SetMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos);
 void OutPutMaze(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);

@@ -11,14 +11,14 @@ POS tStartpos;
 POS tEndpos;
 PLAYER tPlayer;
 
-void Miro(int &totalScore, int miro) {
+void Miro(int &totalScore, int &stage) {
 
-	int score = totalScore;
+	++stage;
 
-	switch (miro)
+	switch (stage)
 	{
 	case 2:
-		Miro2(score);
+		Miro2(totalScore);
 		break;
 	default:
 		break;

@@ -143,13 +143,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="miro.cpp" />
     <ClCompile Include="miroGamePlay.cpp" />
-    <ClCompile Include="TextRPG.cpp" />
+    <ClCompile Include="TextRPGPlay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h" />
     <ClInclude Include="miro.h" />
     <ClInclude Include="miroGamePlay.h" />
-    <ClInclude Include="TextRPG.h" />
+    <ClInclude Include="TextRPGPlay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
