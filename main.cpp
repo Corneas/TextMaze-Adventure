@@ -2,6 +2,7 @@
 #include "miro.h"
 #include "miroGamePlay.h"
 #include "TextRPGPlay.h"
+#include "ItemCrafting.h"
 
 using namespace std;
 

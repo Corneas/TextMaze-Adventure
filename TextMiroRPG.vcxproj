@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="console.cpp" />
+    <ClCompile Include="ItemCrafting.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="miro.cpp" />
     <ClCompile Include="miroGamePlay.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h" />
+    <ClInclude Include="ItemCrafting.h" />
     <ClInclude Include="miro.h" />
     <ClInclude Include="miroGamePlay.h" />
     <ClInclude Include="TextRPGPlay.h" />

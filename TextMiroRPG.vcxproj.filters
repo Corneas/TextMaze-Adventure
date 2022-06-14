@@ -39,6 +39,9 @@
     <ClCompile Include="TextRPGPlay.cpp">
       <Filter>소스 파일\TextRpg</Filter>
     </ClCompile>
+    <ClCompile Include="ItemCrafting.cpp">
+      <Filter>소스 파일\TextRpg</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h">
@@ -51,6 +54,9 @@
       <Filter>헤더 파일\Miro</Filter>
     </ClInclude>
     <ClInclude Include="TextRPGPlay.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemCrafting.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

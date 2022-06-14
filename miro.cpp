@@ -109,7 +109,6 @@ void SetMazeStage3(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, P
 
 		pPlayer->tPos = *pStartpos;
 
-
 		strcpy_s(Maze[0],  "111111211111111");
 		strcpy_s(Maze[1],  "100000000000001");
 		strcpy_s(Maze[2],  "101111111111101");
