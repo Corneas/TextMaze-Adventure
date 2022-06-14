@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\TextRpg">
       <UniqueIdentifier>{43784e4d-3819-4dc4-8073-1375628b66d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\TextRpg">
+      <UniqueIdentifier>{ced2a8b3-b391-4842-80a9-e6101c9f93a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="console.cpp">
@@ -53,11 +56,11 @@
     <ClInclude Include="miroGamePlay.h">
       <Filter>헤더 파일\Miro</Filter>
     </ClInclude>
-    <ClInclude Include="TextRPGPlay.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="ItemCrafting.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\TextRpg</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRPGPlay.h">
+      <Filter>헤더 파일\TextRpg</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
