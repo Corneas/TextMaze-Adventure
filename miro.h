@@ -15,6 +15,7 @@ typedef struct _player {
 
 void SetMazeStage1(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos);
 void SetMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos);
+void SetMazeStage3(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos);
 void OutPutMaze(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);
 
 //void OutPutMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer);

@@ -10,7 +10,7 @@ void SetMazeStage1(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, P
 		pStartpos->y = 1;
 		pEndpos->x = 9;
 		pEndpos->y = 1;
-
+			
 		pPlayer->tPos = *pStartpos;
 
 		strcpy_s(Maze[0], "1111111111");
@@ -96,6 +96,36 @@ void SetMazeStage2(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, P
 		strcpy_s(Maze[14], "111111111111111");
 	}
 
+}
+void SetMazeStage3(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, PPOS pEndpos) {
+	//int stage3 = rand() % 2;
+	int stage3 = 0;
+
+	if (stage3 == 0) {
+		pStartpos->x = 6;
+		pStartpos->y = 0;
+		pEndpos->x = 7;
+		pEndpos->y = 14;
+
+		pPlayer->tPos = *pStartpos;
+
+
+		strcpy_s(Maze[0],  "111111211111111");
+		strcpy_s(Maze[1],  "100000000000001");
+		strcpy_s(Maze[2],  "101111111111101");
+		strcpy_s(Maze[3],  "100000000000001");
+		strcpy_s(Maze[4],  "110111101111011");
+		strcpy_s(Maze[5],  "100100001001001");
+		strcpy_s(Maze[6],  "101100111011101");
+		strcpy_s(Maze[7],  "101010000010101");
+		strcpy_s(Maze[8],  "100011111000101");
+		strcpy_s(Maze[9],  "110110001110101");
+		strcpy_s(Maze[10], "110100101000101");
+		strcpy_s(Maze[11], "110101101010101");
+		strcpy_s(Maze[12], "100101011011101");
+		strcpy_s(Maze[13], "110001000010001");
+		strcpy_s(Maze[14], "111111131111111");
+	}
 }
 
 void OutPutMaze(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer) {

@@ -11,7 +11,7 @@ enum gameType
 	TEXTRPG = 2
 };
 
-void GameSelect(int &totalScore, int &stage);
+void GameSelect(int &totalScore, int &stage, int itemPart[]);
 
 int main(void) {
 	POS tStartpos;
@@ -41,17 +41,22 @@ int main(void) {
 
 	getch = _getch();
 	if (getch)
+		system("cls");
 
-	system("cls");
 
 	Miro1(totalScore);
 
 	while (stage < 5) {
-		GameSelect(totalScore, stage);
+		GameSelect(totalScore, stage, itemPart);
+	}
+
+	cout << "현재 보유한 아이템 개수" << endl;
+	for (auto a : itemPart) {
+		cout << a << endl;
 	}
 }
 
-void GameSelect(int &totalScore, int &stage ) {
+void GameSelect(int &totalScore, int &stage, int itemPart[]) {
 	int gameSelect = 0;
 
 	cout << "현재 스코어 : " << totalScore << endl;
@@ -69,7 +74,7 @@ void GameSelect(int &totalScore, int &stage ) {
 			break;
 		}
 		else if (gameSelect == TEXTRPG) {
-			TextRPG(totalScore, stage);
+			TextRPG(totalScore, stage, itemPart);
 			break;
 		}
 		else {

@@ -1,6 +1,7 @@
 #pragma once
 #include "console.h"
 #include "miroGamePlay.h"
+#include "TextRPGPlay.h"
 
 using namespace std;
 
@@ -12,7 +13,7 @@ enum monsterType {
 	monster5
 };
 
-void TextRPG(int &totalScore, int &stage) { // class¸¦ »ç¿ëÇÏ¿© monster Á¾·ù ±¸ºÐÇÏ±â
+void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 
 	int playerHp = totalScore, playerAtk = 20, playerDef = 0;
 	int monsterHp = 0, monsterAtk = 0, monsterDef = 0;
@@ -64,8 +65,6 @@ void TextRPG(int &totalScore, int &stage) { // class¸¦ »ç¿ëÇÏ¿© monster Á¾·ù ±¸º
 		itemPart += "¾ÆÀÌÅÛÀç·á5";
 		break;
 	}
-
-	//CreateMonster(monsterHP, monsterAtk, monsterDef);
 
 	while (true) {
 		system("cls");
@@ -123,7 +122,7 @@ void TextRPG(int &totalScore, int &stage) { // class¸¦ »ç¿ëÇÏ¿© monster Á¾·ù ±¸º
 		}
 		else if (playerAct == 3) {
 			cout << "¹«½¼ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ½Ã°Ú½À´Ï±î? " << endl;
-			cout << "1. °ø°Ý·ÂÁõ°¡ (ÇöÀç °ø°Ý·ÂÀ» 2¹è·Î ¸¸µé¾îÁØ´Ù) : " << item[0] << endl;
+			cout << "1. °ø°Ý·ÂÁõ°¡ (°ø°Ý·Â X2) : " << item[0] << endl;
 			cout << "2. ¹æ¾î·ÂÁõ°¡ (¹æ¾î·Â +5) : " << item[1] << endl;
 			cin >> iItem;
 			if (iItem == 1 && item[0] != 0) {
@@ -147,16 +146,32 @@ void TextRPG(int &totalScore, int &stage) { // class¸¦ »ç¿ëÇÏ¿© monster Á¾·ù ±¸º
 		if (monsterHp <= 0) {
 			cout << endl << "ÇÃ·¹ÀÌ¾îÀÇ ½Â¸®!" << endl;
 			cout << itemPart << "À»(¸¦) È¹µæÇÏ¿´½À´Ï´Ù!" << endl;
+			GetItem(itemPart, itemParts);
+
 			for (int i = 2; i > 0; --i) {
-				cout << "\r" << i << "ÃÊ ÈÄ ¹Ì·Î°ÔÀÓÀ¸·Î ³Ñ¾î°©´Ï´Ù." << endl;
+				cout << i << "ÃÊ ÈÄ ¹Ì·Î°ÔÀÓÀ¸·Î ³Ñ¾î°©´Ï´Ù.." << endl;
 				Sleep(1000);
 			}
-			//cout << endl << "2ÃÊ ÈÄ ¹Ì·Î°ÔÀÓÀ¸·Î ³Ñ¾î°©´Ï´Ù." << endl;
-			//Sleep(1000);
-			//cout << endl << "1ÃÊ ÈÄ ¹Ì·Î°ÔÀÓÀ¸·Î ³Ñ¾î°©´Ï´Ù." << endl;
-			//Sleep(1000);
 			Miro(totalScore, stage);
 			break;
 		}
+	}
+}
+
+void GetItem(string itemPart, int itemParts[]) {
+	if (itemPart == "¾ÆÀÌÅÛÀç·á1") {
+		itemParts[0]++;
+	}
+	else if (itemPart == "¾ÆÀÌÅÛÀç·á2") {
+		itemParts[1]++;
+	}
+	else if (itemPart == "¾ÆÀÌÅÛÀç·á3") {
+		itemParts[2]++;
+	}
+	else if (itemPart == "¾ÆÀÌÅÛÀç·á4") {
+		itemParts[3]++;
+	}
+	else if (itemPart == "¾ÆÀÌÅÛÀç·á5") {
+		itemParts[4]++;
 	}
 }

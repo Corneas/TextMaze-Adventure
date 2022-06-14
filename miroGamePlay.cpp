@@ -4,6 +4,7 @@
 
 char StrmazeStage1[HEIGHT][WEIGHT];
 char StrmazeStage2[HEIGHT][HEIGHT];
+char StrmazeStage3[HEIGHT][WEIGHT];
 
 using namespace std;
 
@@ -19,6 +20,9 @@ void Miro(int &totalScore, int &stage) {
 	{
 	case 2:
 		Miro2(totalScore);
+		break;
+	case 3:
+		Miro3(totalScore);
 		break;
 	default:
 		break;
@@ -83,4 +87,36 @@ void Miro2(int& totalScore)
 
 		MovePlayer(StrmazeStage2, &tPlayer);
 	}
+}
+
+void Miro3(int& totalScore) {
+
+	time_t start, end;
+	start = time(NULL);
+
+	SetMazeStage3(StrmazeStage3, &tPlayer, &tStartpos, &tEndpos);
+
+	while (true) {
+		system("cls");
+		gotoxy(0, 0);
+		//OutPutMazeStage1(StrmazeStage1, &tPlayer);
+		OutPutMaze(StrmazeStage3, &tPlayer);
+		cout << endl << "q : 종료" << endl;
+		cout << "방향키로 움직여 ◎ 지점에 도착하세요." << endl;
+		if (tPlayer.tPos.x == tEndpos.x && tPlayer.tPos.y == tEndpos.y) {
+			end = time(NULL);
+			cout << endl << "미로 클리어!" << endl;
+			cout << 600 - (int)(end - start) << "점 획득!" << endl;
+			totalScore += 600 - (int)(end - start);
+			break;
+		}
+		char cInput = _getch();
+		if (cInput == 'q' || cInput == 'Q') {
+			cout << "게임 종료";
+			return;
+		}
+		MovePlayer(StrmazeStage3, &tPlayer);
+	}
+
+
 }
