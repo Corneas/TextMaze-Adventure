@@ -31,39 +31,39 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 	switch (monstertype)
 	{
 	case monster1: // HP : 100, ATK : 5, DEF = 2
-		monsterName += "monster1";
+		monsterName += "슬라임";
 		monsterHp = 50;
 		monsterAtk = 5;
 		monsterDef = 2;
-		itemPart += "아이템재료1";
+		itemPart += "끈끈이";
 		break;
 	case monster2: // HP : 300, ATK : 10, DEF = 5
-		monsterName += "monster2";
+		monsterName += "거미";
 		monsterHp = 40;
 		monsterAtk = 10;
 		monsterDef = 5;
-		itemPart += "아이템재료2";
+		itemPart += "실";
 		break;
 	case monster3: // HP : 500, ATK : 15, DEF = 10
-		monsterName += "monster3";
+		monsterName += "나무지기";
 		monsterHp = 80;
 		monsterAtk = 15;
 		monsterDef = 10;
-		itemPart += "아이템재료3";
+		itemPart += "나무";
 		break;
 	case monster4: // HP : 700, ATK : 23, DEF = 0
-		monsterName += "monster4";
+		monsterName += "플라스틱 피규어";
 		monsterHp = 120;
 		monsterAtk = 23;
 		monsterDef = 0;
-		itemPart += "아이템재료4";
+		itemPart += "플라스틱";
 		break;
 	case monster5: // HP : 1000, ATK : 15, DEF = 15
-		monsterName += "monster5";
+		monsterName += "고블린 철광부";
 		monsterHp = 150;
 		monsterAtk = 15;
 		monsterDef = 15;
-		itemPart += "아이템재료5";
+		itemPart += "철";
 		break;
 	}
 
@@ -194,19 +194,19 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 }
 
 void GetItem(string itemPart, int itemParts[]) {
-	if (itemPart == "아이템재료1") {
+	if (itemPart == "끈끈이") {
 		itemParts[0]++;
 	}
-	else if (itemPart == "아이템재료2") {
+	else if (itemPart == "실") {
 		itemParts[1]++;
 	}
-	else if (itemPart == "아이템재료3") {
+	else if (itemPart == "나무") {
 		itemParts[2]++;
 	}
-	else if (itemPart == "아이템재료4") {
+	else if (itemPart == "플라스틱") {
 		itemParts[3]++;
 	}
-	else if (itemPart == "아이템재료5") {
+	else if (itemPart == "철") {
 		itemParts[4]++;
 	}
 }

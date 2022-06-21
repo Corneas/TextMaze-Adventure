@@ -58,7 +58,7 @@ int main(void) {
 	cout << "TextRPG로 넘어가면, 몬스터를 잡고 아이템재료를 얻을 수 있습니다." << endl;
 	cout << "아이템재료를 모아 아이템을 제조해 점수를 얻으세요!" << endl;
 
-	EndingScene5();
+	EndingScene1();
 
 	getch = _getch();
 	if (getch)

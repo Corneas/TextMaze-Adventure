@@ -2,22 +2,199 @@
 
 using namespace std;
 
-void EndingScene1()
+void EndingScene1() // 방패
+{
+	int setmode;
+
+	setmode = _setmode(_fileno(stdout), _O_U8TEXT);
+
+	wcout << L"           ██████████           " << endl;
+	wcout << L"     ██████          ██████	   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	Sleep(400);   
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	Sleep(400);   
+	wcout << L"     ██                  ██	   " << endl;
+	wcout << L"       ██              ██	   " << endl;
+	wcout << L"         ██          ██		   " << endl;
+	wcout << L"           ██      ██		   " << endl;
+	wcout << L"             ██████			   " << endl;
+	Sleep(400);
+
+	setmode = _setmode(_fileno(stdout), _O_TEXT);
+
+	cout << "방패 획득!" << endl;
+	Sleep(2000);
+	system("cls");
+	
+	ShieldAnimation();
+
+	system("cls");
+	cout << "1번째 엔딩 - 방패수집가" << endl;
+}
+
+void ShieldAnimation() {
+
+	int setmode;
+
+	setmode = _setmode(_fileno(stdout), _O_U8TEXT);
+
+	wcout << L"           ██████████           " << endl;
+	wcout << L"     ██████          ██████	   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"   ██                      ██   " << endl;
+	wcout << L"     ██                  ██	   " << endl;
+	wcout << L"       ██              ██	   " << endl;
+	wcout << L"         ██          ██		   " << endl;
+	wcout << L"           ██      ██		   " << endl;
+	wcout << L"             ██████			   " << endl;
+	Sleep(600);
+	system("cls");
+	wcout << L"           ██████████           " << endl;
+	wcout << L"     ██████          ██████	   " << endl;
+	wcout << L"   ██          ██          ██   " << endl;
+	wcout << L"   ██          ██          ██   " << endl;
+	wcout << L"   ██      ██████████      ██   " << endl;
+	wcout << L"   ██          ██          ██   " << endl;
+	wcout << L"   ██          ██          ██   " << endl;
+	wcout << L"   ██          ██          ██   " << endl;
+	wcout << L"     ██        ██        ██	   " << endl;
+	wcout << L"       ██      ██      ██	   " << endl;
+	wcout << L"         ██          ██		   " << endl;
+	wcout << L"           ██      ██		   " << endl;
+	wcout << L"             ██████			   " << endl;
+	Sleep(600); 
+	system("cls");
+	wcout << L"             ██████              " << endl;
+	wcout << L"           ████  ████		    " << endl;
+	wcout << L"     ██████  ██  ██  ██████	    " << endl;
+	wcout << L"   ████  ██  ██  ██  ██  ████    " << endl;
+	wcout << L"   ██  ██  ████  ████  ██  ██    " << endl;
+	wcout << L"   ██    ██  ██  ██  ██    ██    " << endl;
+	wcout << L" ████████████  ██  ████████████  " << endl;
+	wcout << L" ██          ██  ██          ██  " << endl;
+	wcout << L" ████████████  ██  ████████████  " << endl;
+	wcout << L"     ██      ██  ██      ██	    " << endl;
+	wcout << L"       ██    ██  ██    ██	    " << endl;
+	wcout << L"         ██  ██  ██  ██		    " << endl;
+	wcout << L"           ████  ████		    " << endl;
+	wcout << L"             ██  ██			    " << endl;
+	wcout << L"             ██████			    " << endl;
+	Sleep(600);
+	system("cls");
+	wcout << L"    ██████████████████████████    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"      ██                  ██      " << endl;
+	wcout << L"        ██              ██        " << endl;
+	wcout << L"          ██          ██          " << endl;
+	wcout << L"            ██      ██            " << endl;
+	wcout << L"              ██████              " << endl;
+	Sleep(600);
+	system("cls");
+	wcout << L"    ██████████████████████████    " << endl;
+	wcout << L"    ██        ██  ██        ██    " << endl;
+	wcout << L"    ██        ██  ██        ██    " << endl;
+	wcout << L"    ██    ██████████████    ██    " << endl;
+	wcout << L"    ████████          ████████    " << endl;
+	wcout << L"    ██    ██          ██    ██    " << endl;
+	wcout << L"    ████████          ████████    " << endl;
+	wcout << L"    ██      ██      ██      ██    " << endl;
+	wcout << L"      ██      ██  ██      ██      " << endl;
+	wcout << L"        ██    ██████    ██        " << endl;
+	wcout << L"          ██  ██  ██  ██          " << endl;
+	wcout << L"            ████  ████            " << endl;
+	wcout << L"              ██████              " << endl;
+	Sleep(600);
+	system("cls");
+	wcout << L"    ██████████████████████████    " << endl;
+	wcout << L"    ██                      ██    " << endl;
+	wcout << L"    ██    ██████████████    ██    " << endl;
+	wcout << L"    ██  ██              ██  ██    " << endl;
+	wcout << L"    ██  ██  ██  ██  ██  ██  ██    " << endl;
+	wcout << L"    ██  ██  ██████████  ██  ██    " << endl;
+	wcout << L"    ██  ██  ██  ██  ██  ██  ██    " << endl;
+	wcout << L"    ██    ██    ██    ██    ██    " << endl;
+	wcout << L"      ██    ██  ██  ██    ██      " << endl;
+	wcout << L"        ██    ██  ██    ██        " << endl;
+	wcout << L"          ██    ██    ██          " << endl;
+	wcout << L"            ██      ██            " << endl;
+	wcout << L"              ██████              " << endl;
+	Sleep(600);
+	system("cls");
+	wcout << L"	            ██████████             " << endl;
+	wcout << L"	        ████          ████         " << endl;
+	wcout << L"	      ██                  ██       " << endl;
+	wcout << L"	    ██                      ██     " << endl;
+	wcout << L"	  ██                          ██   " << endl;
+	wcout << L"	  ██                          ██   " << endl;
+	wcout << L"	  ██                          ██   " << endl;
+	wcout << L"	  ██                          ██   " << endl;
+	wcout << L"	  ██                          ██   " << endl;
+	wcout << L"	    ██                      ██     " << endl;
+	wcout << L"	      ██                  ██       " << endl;
+	wcout << L"	        ████          ████         " << endl;
+	wcout << L"	            ██████████             " << endl;
+	Sleep(600);
+	system("cls");
+	wcout << L"	            ██████████             " << endl;
+	wcout << L"	        ████          ████         " << endl;
+	wcout << L"	      ██                  ██       " << endl;
+	wcout << L"	    ██        ██████        ██     " << endl;
+	wcout << L"	  ██        ██      ██        ██   " << endl;
+	wcout << L"	  ██      ██          ██      ██   " << endl;
+	wcout << L"	  ██      ██   ████   ██      ██   " << endl;
+	wcout << L"	  ██      ██          ██      ██   " << endl;
+	wcout << L"	  ██        ██      ██        ██   " << endl;
+	wcout << L"	    ██        ██████        ██     " << endl;
+	wcout << L"	      ██                  ██       " << endl;
+	wcout << L"	        ████          ████         " << endl;
+	wcout << L"	            ██████████             " << endl;
+	Sleep(600);
+	system("cls");
+	wcout << L"	            ██████████             " << endl;
+	wcout << L"	        ████  ██  ██  ████         " << endl;
+	wcout << L"	      ██      ██  ██      ██       " << endl;
+	wcout << L"	    ██        ██████        ██     " << endl;
+	wcout << L"	  ██        ██      ██        ██   " << endl;
+	wcout << L"	  ██████████          ██████████   " << endl;
+	wcout << L"	  ██      ██          ██      ██   " << endl;
+	wcout << L"	  ██████████          ██████████   " << endl;
+	wcout << L"	  ██        ██      ██        ██   " << endl;
+	wcout << L"	    ██        ██████        ██     " << endl;
+	wcout << L"	      ██      ██  ██      ██       " << endl;
+	wcout << L"	        ████  ██  ██  ████         " << endl;
+	wcout << L"	            ██████████             " << endl;
+	Sleep(600);
+	system("cls");
+
+	setmode = _setmode(_fileno(stdout), _O_TEXT);
+}
+
+void EndingScene2() // 투척용 무기
 {
 
 }
 
-void EndingScene2()
+void EndingScene3() // 단검
 {
 
 }
 
-void EndingScene3()
-{
-
-}
-
-void EndingScene4()
+void EndingScene4() // 활
 {
 
 }
@@ -60,7 +237,7 @@ void EndingScene5()
 	StaffAnimation();
 
 	system("cls");
-	cout << "5번째 엔딩 - 마법지팡이" << endl;
+	cout << "5번째 엔딩 - 미로파괴자" << endl;
 }
 
 void StaffAnimation() {
@@ -801,15 +978,6 @@ void StaffAnimation() {
 	wcout << L"              /   \				" << endl;
 	wcout << L"_____________/_ __ \_____________" << endl;
 	Sleep(1000);
-
-		//███╗   ███╗ █████╗ ███████╗███████╗
-		//████╗ ████║██╔══██╗╚══███╔╝██╔════╝
-		//██╔████╔██║███████║  ███╔╝ █████╗
-		//██║╚██╔╝██║██╔══██║ ███╔╝  ██╔══╝
-		//██║ ╚═╝ ██║██║  ██║███████╗███████╗
-		//╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
-
-
 
 	setmode = _setmode(_fileno(stdout), _O_TEXT);
 }

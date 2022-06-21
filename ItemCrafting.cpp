@@ -113,8 +113,10 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 		else {
 			cout << "1번 ~ 5번사이의 숫자를 입력해주세요!" << endl;
 		}
-	}
 
+	}
+	cout << "총합 스코어 : " << totalScore << "점";
+	return;
 }
 
 void Item3(int itemPart[], bool &isItem3Active) {
