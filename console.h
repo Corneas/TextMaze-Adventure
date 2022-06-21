@@ -8,4 +8,5 @@
 #include <string>
 #include <vector>
 #include "miro.h"
+#include "Cursor.h"
 void gotoxy(int x, int y);

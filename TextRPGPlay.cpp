@@ -22,6 +22,7 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 	int iItem;
 	string monsterName = "", itemPart = "";
 	int playerAct;
+	Cursorhide();
 
 	srand((unsigned int)time(NULL));
 

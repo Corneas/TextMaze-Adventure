@@ -45,6 +45,12 @@
     <ClCompile Include="ItemCrafting.cpp">
       <Filter>소스 파일\TextRpg</Filter>
     </ClCompile>
+    <ClCompile Include="cursor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EndingScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h">
@@ -61,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="TextRPGPlay.h">
       <Filter>헤더 파일\TextRpg</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingScene.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

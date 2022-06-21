@@ -1,4 +1,5 @@
 #include "miro.h"
+
 #include "console.h"
 
 void gotoxy(int x, int y) {

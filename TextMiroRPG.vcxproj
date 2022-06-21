@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="console.cpp" />
+    <ClCompile Include="cursor.cpp" />
+    <ClCompile Include="EndingScene.cpp" />
     <ClCompile Include="ItemCrafting.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="miro.cpp" />
@@ -148,6 +150,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h" />
+    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="EndingScene.h" />
     <ClInclude Include="ItemCrafting.h" />
     <ClInclude Include="miro.h" />
     <ClInclude Include="miroGamePlay.h" />

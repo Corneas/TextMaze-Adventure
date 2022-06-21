@@ -24,6 +24,10 @@ void Miro(int &totalScore, int &stage) {
 	case 3:
 		Miro3(totalScore);
 		break;
+	case 4:
+		break;
+	case 5:
+		break;
 	default:
 		break;
 	}
@@ -34,6 +38,7 @@ void Miro1(int &totalScore) {
 
 	time_t start, end;
 	start = time(NULL);
+	Cursorhide();
 
 	SetMazeStage1(StrmazeStage1, &tPlayer, &tStartpos, &tEndpos);
 
@@ -66,6 +71,7 @@ void Miro2(int& totalScore)
 {
 	time_t start, end;
 	start = time(NULL);
+	Cursorhide();
 
 	SetMazeStage2(StrmazeStage2, &tPlayer, &tStartpos, &tEndpos);
 	while (true) {
@@ -93,6 +99,7 @@ void Miro3(int& totalScore) {
 
 	time_t start, end;
 	start = time(NULL);
+	Cursorhide();
 
 	SetMazeStage3(StrmazeStage3, &tPlayer, &tStartpos, &tEndpos);
 
