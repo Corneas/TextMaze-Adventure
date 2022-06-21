@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "console.h"
 #include "miroGamePlay.h"
 #include "TextRPGPlay.h"
@@ -35,122 +35,156 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 		monsterHp = 50;
 		monsterAtk = 5;
 		monsterDef = 2;
-		itemPart += "¾ÆÀÌÅÛÀç·á1";
+		itemPart += "ì•„ì´í…œì¬ë£Œ1";
 		break;
 	case monster2: // HP : 300, ATK : 10, DEF = 5
 		monsterName += "monster2";
 		monsterHp = 40;
 		monsterAtk = 10;
 		monsterDef = 5;
-		itemPart += "¾ÆÀÌÅÛÀç·á2";
+		itemPart += "ì•„ì´í…œì¬ë£Œ2";
 		break;
 	case monster3: // HP : 500, ATK : 15, DEF = 10
 		monsterName += "monster3";
 		monsterHp = 80;
 		monsterAtk = 15;
 		monsterDef = 10;
-		itemPart += "¾ÆÀÌÅÛÀç·á3";
+		itemPart += "ì•„ì´í…œì¬ë£Œ3";
 		break;
 	case monster4: // HP : 700, ATK : 23, DEF = 0
 		monsterName += "monster4";
 		monsterHp = 120;
 		monsterAtk = 23;
 		monsterDef = 0;
-		itemPart += "¾ÆÀÌÅÛÀç·á4";
+		itemPart += "ì•„ì´í…œì¬ë£Œ4";
 		break;
 	case monster5: // HP : 1000, ATK : 15, DEF = 15
 		monsterName += "monster5";
 		monsterHp = 150;
 		monsterAtk = 15;
 		monsterDef = 15;
-		itemPart += "¾ÆÀÌÅÛÀç·á5";
+		itemPart += "ì•„ì´í…œì¬ë£Œ5";
 		break;
 	}
 
 	while (true) {
 		system("cls");
 		if (playerHp <= 0) {
-			cout << "ÇÃ·¹ÀÌ¾î »ç¸Á" << endl;
+			cout << "í”Œë ˆì´ì–´ ì‚¬ë§" << endl;
 			break;
 		}
 
-		cout << "¸ó½ºÅÍ¿ÍÀÇ ÀüÅõ ½ÃÀÛ!" << endl << endl;
-		cout << "ÇÃ·¹ÀÌ¾î Á¤º¸" << endl;
+		cout << "ëª¬ìŠ¤í„°ì™€ì˜ ì „íˆ¬ ì‹œì‘!" << endl << endl;
+		cout << "í”Œë ˆì´ì–´ ì •ë³´" << endl;
 		cout << "Hp : " << playerHp << endl;
 		cout << "Atk : " << playerAtk << endl;
 		cout << "Def : " << playerDef << endl << endl;
 
-		cout << "¸ó½ºÅÍ Á¤º¸" << endl;
-		cout << "¸ó½ºÅÍ ÀÌ¸§ : " << monsterName << endl;
+		cout << "ëª¬ìŠ¤í„° ì •ë³´" << endl;
+		cout << "ëª¬ìŠ¤í„° ì´ë¦„ : " << monsterName << endl;
 		cout << "Hp : " << monsterHp << endl;
 		cout << "Atk : " << monsterAtk << endl;
 		cout << "Def : " << monsterDef << endl << endl;
 
-		cout << "¹«¾ùÀ» ÇÒ °ÍÀÎÁö ¼±ÅÃÇØÁÖ¼¼¿ä!" << endl;
-		cout << "1 : °ø°İ, 2 : µ¥¹ÌÁö¹İ»ç (³²Àº È½¼ö : " << reflectCount << "), 3 : ¾ÆÀÌÅÛ»ç¿ë" << endl << endl;
+		cout << "ë¬´ì—‡ì„ í•  ê²ƒì¸ì§€ ì„ íƒí•´ì£¼ì„¸ìš”!" << endl;
+		cout << "1 : ê³µê²©, 2 : ë°ë¯¸ì§€ë°˜ì‚¬ (ë‚¨ì€ íšŸìˆ˜ : " << reflectCount << "), 3 : ì•„ì´í…œì‚¬ìš©" << endl << endl;
 
 		cin >> playerAct;
 
 		if (playerAct == 1) {
-			cout << "ÇÃ·¹ÀÌ¾îÀÇ °ø°İ!" << endl;
-			cout << "ÀÔÈù µ¥¹ÌÁö : " << (playerAtk - monsterDef) << endl;
-			cout << "¸ó½ºÅÍÀÇ °ø°İ!" << endl;
-			cout << "ÀÔÀº µ¥¹ÌÁö : " << (monsterAtk - playerDef) << endl;
+			cout << "í”Œë ˆì´ì–´ì˜ ê³µê²©!" << endl;
+			int setmode;
+
+			setmode = _setmode(_fileno(stdout), _O_U8TEXT);
+
+			system("cls");
+			wcout << L"        " << endl;
+			wcout << L"â–ˆâ–ˆ      " << endl;
+			wcout << L"â–ˆâ–ˆâ–ˆâ–ˆ    " << endl;
+			wcout << L"â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			wcout << L"  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			wcout << L"    â–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			wcout << L"        " << endl;
+			Sleep(100);
+			system("cls");
+			wcout << L"                      " << endl;
+			wcout << L"â–ˆâ–ˆ                    " << endl;
+			wcout << L"â–ˆâ–ˆâ–ˆâ–ˆ                  " << endl;
+			wcout << L"â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ              " << endl;
+			wcout << L"  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			wcout << L"    â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			wcout << L"        â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			Sleep(100);
+			system("cls");
+			wcout << L"                               â–ˆâ–ˆ" << endl;
+			wcout << L" â–ˆâ–ˆ                          â–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			wcout << L" â–ˆâ–ˆâ–ˆâ–ˆ                      â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ" << endl;
+			wcout << L" â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ              â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ  " << endl;
+			wcout << L"   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ      " << endl;
+			wcout << L"     â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ        " << endl;
+			wcout << L"         â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ          " << endl;
+			Sleep(500);
+
+			setmode = _setmode(_fileno(stdout), _O_TEXT);
+			cout << endl;
+			cout << "ì…íŒ ë°ë¯¸ì§€ : " << (playerAtk - monsterDef) << endl;
+			cout << "ëª¬ìŠ¤í„°ì˜ ê³µê²©!" << endl;
+			cout << "ì…ì€ ë°ë¯¸ì§€ : " << (monsterAtk - playerDef) << endl;
 			playerHp -= (monsterAtk - playerDef);
 			monsterHp -= (playerAtk - monsterDef);
 			Sleep(1000);
 		}
 		else if (playerAct == 2) {
 			if (reflectCount <= 0) {
-				cout << "´õ ÀÌ»ó µ¥¹ÌÁö¹İ»ç¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù!" << endl;
+				cout << "ë” ì´ìƒ ë°ë¯¸ì§€ë°˜ì‚¬ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤!" << endl;
 				break;
 			}
-			cout << "µ¥¹ÌÁö¹İ»ç!" << endl;
+			cout << "ë°ë¯¸ì§€ë°˜ì‚¬!" << endl;
 			if (monsterAtk - monsterDef > 0) {
-				cout << "ÀÔÈù µ¥¹ÌÁö : " << (monsterAtk - monsterDef) << endl;
+				cout << "ì…íŒ ë°ë¯¸ì§€ : " << (monsterAtk - monsterDef) << endl;
 				monsterHp -= (monsterAtk - monsterDef);
 			}
 			else if (monsterAtk - monsterDef == 0) {
-				cout << "¾Æ´Ö?! ÀûÀÇ ¹æ¾î·ÂÀÌ ÀûÀÇ °ø°İ·ÂÀÌ¶û °°¾Æ¼­ È¿°ú°¡ ¾øÀİ¾Æ!" << endl;
-				cout << "ÀÔÈù µ¥¹ÌÁö : 0" << endl;
+				cout << "ì•„ë‹›?! ì ì˜ ë°©ì–´ë ¥ì´ ì ì˜ ê³µê²©ë ¥ì´ë‘ ê°™ì•„ì„œ íš¨ê³¼ê°€ ì—†ì–ì•„!" << endl;
+				cout << "ì…íŒ ë°ë¯¸ì§€ : 0" << endl;
 			}
 			else if (monsterAtk - monsterDef <= 0) {
-				cout << "ÀûÀÇ ¹æ¾î·ÂÀÌ ÀûÀÇ °ø°İ·Âº¸´Ù ³ô¾Æ¼­ µ¥¹ÌÁö°¡ ¾Èµé¾î°¡!" << endl;
-				cout << "ÀÔÈù µ¥¹ÌÁö : 0" << endl;
+				cout << "ì ì˜ ë°©ì–´ë ¥ì´ ì ì˜ ê³µê²©ë ¥ë³´ë‹¤ ë†’ì•„ì„œ ë°ë¯¸ì§€ê°€ ì•ˆë“¤ì–´ê°€!" << endl;
+				cout << "ì…íŒ ë°ë¯¸ì§€ : 0" << endl;
 			}
 			reflectCount--;
 			Sleep(1000);
 		}
 		else if (playerAct == 3) {
-			cout << "¹«½¼ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ½Ã°Ú½À´Ï±î? " << endl;
-			cout << "1. °ø°İ·ÂÁõ°¡ (°ø°İ·Â X2) : " << item[0] << endl;
-			cout << "2. ¹æ¾î·ÂÁõ°¡ (¹æ¾î·Â +5) : " << item[1] << endl;
+			cout << "ë¬´ìŠ¨ ì•„ì´í…œì„ ì‚¬ìš©í•˜ì‹œê² ìŠµë‹ˆê¹Œ? " << endl;
+			cout << "1. ê³µê²©ë ¥ì¦ê°€ (ê³µê²©ë ¥ X2) : " << item[0] << endl;
+			cout << "2. ë°©ì–´ë ¥ì¦ê°€ (ë°©ì–´ë ¥ +5) : " << item[1] << endl;
 			cin >> iItem;
 			if (iItem == 1 && item[0] != 0) {
-				cout << "°ø°İ·Â »ó½Â!" << endl;
+				cout << "ê³µê²©ë ¥ ìƒìŠ¹!" << endl;
 				item[0]--;
 				playerAtk *= 2;
 				Sleep(1000);
 			}
 			else if (iItem == 2 && item[1] != 0) {
-				cout << "¹æ¾î·Â »ó½Â!" << endl;
+				cout << "ë°©ì–´ë ¥ ìƒìŠ¹!" << endl;
 				item[1]--;
 				playerDef += 5;
 				Sleep(1000);
 			}
 			else if (item[0] <= 0 || item[1] <= 0) {
-				cout << "¾ÆÀÌÅÛÀÌ ¸ğÀÚ¶ø´Ï´Ù!" << endl;
+				cout << "ì•„ì´í…œì´ ëª¨ìëë‹ˆë‹¤!" << endl;
 				Sleep(1000);
 			}
  		}
 
 		if (monsterHp <= 0) {
-			cout << endl << "ÇÃ·¹ÀÌ¾îÀÇ ½Â¸®!" << endl;
-			cout << itemPart << "À»(¸¦) È¹µæÇÏ¿´½À´Ï´Ù!" << endl;
+			cout << endl << "í”Œë ˆì´ì–´ì˜ ìŠ¹ë¦¬!" << endl;
+			cout << itemPart << "ì„(ë¥¼) íšë“í•˜ì˜€ìŠµë‹ˆë‹¤!" << endl;
 			GetItem(itemPart, itemParts);
 
 			for (int i = 2; i > 0; --i) {
-				cout << i << "ÃÊ ÈÄ ¹Ì·Î°ÔÀÓÀ¸·Î ³Ñ¾î°©´Ï´Ù.." << endl;
+				cout << i << "ì´ˆ í›„ ë¯¸ë¡œê²Œì„ìœ¼ë¡œ ë„˜ì–´ê°‘ë‹ˆë‹¤.." << endl;
 				Sleep(1000);
 			}
 			Miro(totalScore, stage);
@@ -160,19 +194,19 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 }
 
 void GetItem(string itemPart, int itemParts[]) {
-	if (itemPart == "¾ÆÀÌÅÛÀç·á1") {
+	if (itemPart == "ì•„ì´í…œì¬ë£Œ1") {
 		itemParts[0]++;
 	}
-	else if (itemPart == "¾ÆÀÌÅÛÀç·á2") {
+	else if (itemPart == "ì•„ì´í…œì¬ë£Œ2") {
 		itemParts[1]++;
 	}
-	else if (itemPart == "¾ÆÀÌÅÛÀç·á3") {
+	else if (itemPart == "ì•„ì´í…œì¬ë£Œ3") {
 		itemParts[2]++;
 	}
-	else if (itemPart == "¾ÆÀÌÅÛÀç·á4") {
+	else if (itemPart == "ì•„ì´í…œì¬ë£Œ4") {
 		itemParts[3]++;
 	}
-	else if (itemPart == "¾ÆÀÌÅÛÀç·á5") {
+	else if (itemPart == "ì•„ì´í…œì¬ë£Œ5") {
 		itemParts[4]++;
 	}
 }

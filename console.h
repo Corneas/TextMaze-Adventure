@@ -9,4 +9,5 @@
 #include <vector>
 #include "miro.h"
 #include "Cursor.h"
+#include "EndingScene.h"
 void gotoxy(int x, int y);

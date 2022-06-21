@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void ItemCrafting(int itemPart[]) {
+void ItemCrafting(int itemPart[], int &totalScore) {
 
 	int craftItem = -1;
 	int item2ingredient = 0;
@@ -53,7 +53,9 @@ void ItemCrafting(int itemPart[]) {
 		if (craftItem == 1) {
 			if (isItem1Active) {
 				// 스코어 +2000점
+				totalScore += 2000;
 				// 엔딩씬1
+				EndingScene1();
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -63,7 +65,9 @@ void ItemCrafting(int itemPart[]) {
 		else if (craftItem == 2) {
 			if (isItem2Active) {
 				// 스코어 + 1800점
+				totalScore += 1800;
 				// 엔딩씬2
+				EndingScene2();
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -73,7 +77,9 @@ void ItemCrafting(int itemPart[]) {
 		else if (craftItem == 3) {
 			if (isItem3Active) {
 				// 스코어 + 1700점
+				totalScore += 1700;
 				// 엔딩씬3
+				EndingScene3();
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -83,7 +89,9 @@ void ItemCrafting(int itemPart[]) {
 		else if (craftItem == 4) {
 			if (isItem4Active) {
 				// 스코어 + 1500점
+				totalScore += 1500;
 				// 엔딩씬4
+				EndingScene4();
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -93,7 +101,9 @@ void ItemCrafting(int itemPart[]) {
 		else if (craftItem == 5) {
 			if (isItem5Active) {
 				// 스코어 + 1000점
+				totalScore += 1000;
 				// 엔딩씬5
+				EndingScene5();
 			}
 			else {
 				cout << "제작불가!" << endl;
