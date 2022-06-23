@@ -53,9 +53,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="console.h">
-      <Filter>헤더 파일\Miro</Filter>
-    </ClInclude>
     <ClInclude Include="miro.h">
       <Filter>헤더 파일\Miro</Filter>
     </ClInclude>
@@ -72,6 +69,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="EndingScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="console.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

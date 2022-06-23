@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "miro.h"
 #include "Cursor.h"
 #include "EndingScene.h"

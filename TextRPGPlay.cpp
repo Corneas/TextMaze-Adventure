@@ -18,7 +18,7 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 	int playerHp = totalScore, playerAtk = 20, playerDef = 0;
 	int monsterHp = 0, monsterAtk = 0, monsterDef = 0;
 	int reflectCount = 3;
-	int item[5] = { 1, 1, 0, 0, 0 };
+	int item[2] = { 1, 1 };
 	int iItem;
 	string monsterName = "", itemPart = "";
 	int playerAct;
@@ -105,7 +105,7 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 			wcout << L"  ██████" << endl;
 			wcout << L"    ████" << endl;
 			wcout << L"        " << endl;
-			Sleep(100);
+			Sleep(50);
 			system("cls");
 			wcout << L"                      " << endl;
 			wcout << L"██                    " << endl;
@@ -114,7 +114,7 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 			wcout << L"  ████████████████████" << endl;
 			wcout << L"    ██████████████████" << endl;
 			wcout << L"        ██████████████" << endl;
-			Sleep(100);
+			Sleep(50);
 			system("cls");
 			wcout << L"                               ██" << endl;
 			wcout << L" ██                          ████" << endl;
@@ -123,7 +123,7 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 			wcout << L"   ████████████████████████      " << endl;
 			wcout << L"     ████████████████████        " << endl;
 			wcout << L"         ██████████████          " << endl;
-			Sleep(500);
+			Sleep(300);
 
 			setmode = _setmode(_fileno(stdout), _O_TEXT);
 			cout << endl;
