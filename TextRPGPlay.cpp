@@ -12,16 +12,18 @@ enum monsterType {
 	monster4,
 	monster5
 };
+	int item[2] = { 3, 3 };
+	int reflectCount = 5;
+
 
 void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 
-	int playerHp = totalScore, playerAtk = 20, playerDef = 0;
+	int playerHp = totalScore, playerAtk = 30, playerDef = 0;
 	int monsterHp = 0, monsterAtk = 0, monsterDef = 0;
-	int reflectCount = 3;
-	int item[2] = { 1, 1 };
 	int iItem;
 	string monsterName = "", itemPart = "";
 	int playerAct;
+	int damaged = 0;
 	Cursorhide();
 
 	srand((unsigned int)time(NULL));
@@ -32,36 +34,36 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 	{
 	case monster1: // HP : 100, ATK : 5, DEF = 2
 		monsterName += "슬라임";
-		monsterHp = 50;
-		monsterAtk = 5;
-		monsterDef = 2;
+		monsterHp = 380;
+		monsterAtk = 30;
+		monsterDef = 0;
 		itemPart += "끈끈이";
 		break;
 	case monster2: // HP : 300, ATK : 10, DEF = 5
 		monsterName += "거미";
-		monsterHp = 40;
-		monsterAtk = 10;
+		monsterHp = 300;
+		monsterAtk = 50;
 		monsterDef = 5;
 		itemPart += "실";
 		break;
 	case monster3: // HP : 500, ATK : 15, DEF = 10
 		monsterName += "나무지기";
-		monsterHp = 80;
+		monsterHp = 500;
 		monsterAtk = 15;
-		monsterDef = 10;
+		monsterDef = 23;
 		itemPart += "나무";
 		break;
 	case monster4: // HP : 700, ATK : 23, DEF = 0
 		monsterName += "플라스틱 피규어";
-		monsterHp = 120;
-		monsterAtk = 23;
+		monsterHp = 600;
+		monsterAtk = 40;
 		monsterDef = 0;
 		itemPart += "플라스틱";
 		break;
 	case monster5: // HP : 1000, ATK : 15, DEF = 15
 		monsterName += "고블린 철광부";
-		monsterHp = 150;
-		monsterAtk = 15;
+		monsterHp = 550;
+		monsterAtk = 30;
 		monsterDef = 15;
 		itemPart += "철";
 		break;
@@ -129,8 +131,12 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 			cout << endl;
 			cout << "입힌 데미지 : " << (playerAtk - monsterDef) << endl;
 			cout << "몬스터의 공격!" << endl;
-			cout << "입은 데미지 : " << (monsterAtk - playerDef) << endl;
-			playerHp -= (monsterAtk - playerDef);
+			damaged = monsterAtk - playerDef;
+			if (damaged <= 0) {
+				damaged = 0;
+			}
+			cout << "입은 데미지 : " << damaged << endl;
+			playerHp -= damaged;
 			monsterHp -= (playerAtk - monsterDef);
 			Sleep(1000);
 		}
@@ -158,7 +164,7 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 		else if (playerAct == 3) {
 			cout << "무슨 아이템을 사용하시겠습니까? " << endl;
 			cout << "1. 공격력증가 (공격력 X2) : " << item[0] << endl;
-			cout << "2. 방어력증가 (방어력 +5) : " << item[1] << endl;
+			cout << "2. 방어력증가 (방어력 +10) : " << item[1] << endl;
 			cin >> iItem;
 			if (iItem == 1 && item[0] != 0) {
 				cout << "공격력 상승!" << endl;

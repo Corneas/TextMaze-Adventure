@@ -210,7 +210,6 @@ void ThrowWeaponAnimation() {
 	wcout << L"	██║  ██║██████╔╝ ╚████╔╝ ███████╗██║ ╚████║   ██║   ╚██████╔╝██║  ██║███████╗██╗██╗" << endl;
 	wcout << L"	╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝╚═╝" << endl;
 
-
 	setmode = _setmode(_fileno(stdout), _O_TEXT);
 }
 
@@ -602,7 +601,7 @@ void BowAnimation() {
 	Sleep(50);
 	system("cls");
 	wcout << L"              ██████                                                               " << endl;
-	wcout << L"              ██    ██                                      >                      " << endl;
+	wcout << L"              ██    ██                                                             " << endl;
 	wcout << L"              ██      ██                                                           " << endl;
 	wcout << L"              ██      ████                                                         " << endl;
 	wcout << L"              ██      ████                        .                                " << endl;
@@ -617,7 +616,7 @@ void BowAnimation() {
 	Sleep(50);
 	system("cls");
 	wcout << L"              ██████                                                               " << endl;
-	wcout << L"              ██    ██                                      >                      " << endl;
+	wcout << L"              ██    ██                                                             " << endl;
 	wcout << L"              ██      ██                                                           " << endl;
 	wcout << L"              ██      ████                                                         " << endl;
 	wcout << L"              ██      ████                                                         " << endl;
@@ -632,7 +631,7 @@ void BowAnimation() {
 	Sleep(50);
 	system("cls");
 	wcout << L"              ██████                                                               " << endl;
-	wcout << L"              ██    ██                                      >                      " << endl;
+	wcout << L"              ██    ██                                                             " << endl;
 	wcout << L"              ██      ██                                                           " << endl;
 	wcout << L"              ██      ████                                                         " << endl;
 	wcout << L"              ██      ████                                                         " << endl;

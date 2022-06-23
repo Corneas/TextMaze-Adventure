@@ -56,6 +56,7 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 				totalScore += 2000;
 				// 엔딩씬1
 				EndingScene1();
+				break;
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -68,6 +69,7 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 				totalScore += 1800;
 				// 엔딩씬2
 				EndingScene2();
+				break;
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -80,6 +82,7 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 				totalScore += 1700;
 				// 엔딩씬3
 				EndingScene3();
+				break;
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -92,6 +95,7 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 				totalScore += 1500;
 				// 엔딩씬4
 				EndingScene4();
+				break;
 			}
 			else {
 				cout << "제작불가!" << endl;
@@ -104,6 +108,7 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 				totalScore += 1000;
 				// 엔딩씬5
 				EndingScene5();
+				break;
 			}
 			else {
 				cout << "제작불가!" << endl;
