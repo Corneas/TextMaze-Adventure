@@ -16,9 +16,9 @@ enum monsterType {
 	int reflectCount = 5;
 
 
-void TextRPG(int &totalScore, int &stage, int itemParts[]) {
+void TextRPG(int &totalScore, int &stage, int itemParts[], int& score) {
 
-	int playerHp = totalScore, playerAtk = 30, playerDef = 0;
+	int playerHp = score, playerAtk = 30, playerDef = 0;
 	int monsterHp = 0, monsterAtk = 0, monsterDef = 0;
 	int iItem;
 	string monsterName = "", itemPart = "";
@@ -34,36 +34,36 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 	{
 	case monster1: // HP : 100, ATK : 5, DEF = 2
 		monsterName += "슬라임";
-		monsterHp = 380;
-		monsterAtk = 30;
+		monsterHp = 140;
+		monsterAtk = 80;
 		monsterDef = 0;
 		itemPart += "끈끈이";
 		break;
 	case monster2: // HP : 300, ATK : 10, DEF = 5
 		monsterName += "거미";
-		monsterHp = 300;
-		monsterAtk = 50;
+		monsterHp = 160;
+		monsterAtk = 100;
 		monsterDef = 5;
 		itemPart += "실";
 		break;
 	case monster3: // HP : 500, ATK : 15, DEF = 10
 		monsterName += "나무지기";
-		monsterHp = 500;
-		monsterAtk = 15;
+		monsterHp = 60;
+		monsterAtk = 50;
 		monsterDef = 23;
 		itemPart += "나무";
 		break;
 	case monster4: // HP : 700, ATK : 23, DEF = 0
 		monsterName += "플라스틱 피규어";
-		monsterHp = 600;
+		monsterHp = 300;
 		monsterAtk = 40;
 		monsterDef = 0;
 		itemPart += "플라스틱";
 		break;
 	case monster5: // HP : 1000, ATK : 15, DEF = 15
 		monsterName += "고블린 철광부";
-		monsterHp = 550;
-		monsterAtk = 30;
+		monsterHp = 200;
+		monsterAtk = 50;
 		monsterDef = 15;
 		itemPart += "철";
 		break;
@@ -193,7 +193,7 @@ void TextRPG(int &totalScore, int &stage, int itemParts[]) {
 				cout << i << "초 후 미로게임으로 넘어갑니다.." << endl;
 				Sleep(1000);
 			}
-			Miro(totalScore, stage);
+			Miro(totalScore, stage, score);
 			break;
 		}
 	}

@@ -5,5 +5,5 @@
 
 using namespace std;
 
-void TextRPG(int &totalScore, int &stage, int itemPart[]);
+void TextRPG(int &totalScore, int &stage, int itemPart[], int& score);
 void GetItem(string itemPart, int itemParts[]);

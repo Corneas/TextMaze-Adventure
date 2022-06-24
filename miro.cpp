@@ -238,10 +238,10 @@ void SetMazeStage5(char Maze[HEIGHT][WEIGHT], PPLAYER pPlayer, PPOS pStartpos, P
 
 	}
 	else if (stage5 == 1) {
-		pStartpos->x = 14;
-		pStartpos->y = 1;
-		pEndpos->x = 14;
-		pEndpos->y = 13;
+		pStartpos->x = 7;
+		pStartpos->y = 0;
+		pEndpos->x = 9;
+		pEndpos->y = 14;
 
 		pPlayer->tPos = *pStartpos;
 

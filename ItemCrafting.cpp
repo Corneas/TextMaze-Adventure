@@ -23,12 +23,12 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 			item2ingredient++;
 		}
 	}
-
+	
 	if (isItem1Active) {
-		cout << "아이템1 제작 가능" << endl;
+		cout << "아이템1 제작 가능 (동일아이템 x 5)" << endl;
 	}
 	else if (!isItem1Active) {
-		cout << "아이템1 제작 불가" << endl;
+		cout << "아이템1 제작 불가 (동일아이템 x 5)" << endl;
 	}
 
 	if (item2ingredient == 5) {
@@ -37,10 +37,10 @@ void ItemCrafting(int itemPart[], int &totalScore) {
 	}
 
 	if (isItem2Active) {
-		cout << "아이템2 제작 가능" << endl;
+		cout << "아이템2 제작 가능 (끈끈이, 실, 나무, 플라스틱, 철) " << endl;
 	}
 	else if (!isItem2Active) {
-		cout << "아이템2 제작 불가" << endl;
+		cout << "아이템2 제작 불가 (끈끈이, 실, 나무, 플라스틱, 철) " << endl;
 	}
 
 	Item3(itemPart, isItem3Active);
@@ -139,10 +139,10 @@ void Item3(int itemPart[], bool &isItem3Active) {
 	}
 
 	if (isItem3Active) {
-		cout << "아이템3 제작 가능" << endl;
+		cout << "아이템3 제작 가능 (동일아이템1 x 3, 동일아이템2 x 2)" << endl;
 	}
 	else if(!isItem3Active) {
-		cout << "아이템3 제작 불가" << endl;
+		cout << "아이템3 제작 불가 (동일아이템1 x 3, 동일아이템2 x 2)" << endl;
 	}
 }
 
@@ -164,10 +164,10 @@ void Item4(int itemPart[], bool &isItem4Active) {
 	}
 
 	if (isItem4Active) {
-		cout << "아이템4 제작 가능" << endl;
+		cout << "아이템4 제작 가능 (동일아이템1 x 2, 동일아이템2 x 2, 동일아이템3 x 1)" << endl;
 	}
 	else if (!isItem4Active) {
-		cout << "아이템4 제작 불가" << endl;
+		cout << "아이템4 제작 불가 (동일아이템1 x 2, 동일아이템2 x 2, 동일아이템3 x 1)" << endl;
 	}
 }
 
@@ -186,9 +186,9 @@ void Item5(int itemPart[], bool &isItem5Active) {
 	}
 
 	if (isItem5Active) {
-		cout << "아이템5 제작 가능" << endl;
+		cout << "아이템5 제작 가능 (아이템x)" << endl;
 	}
 	else if (!isItem5Active) {
-		cout << "아이템5 제작 불가" << endl;
+		cout << "아이템5 제작 불가 (아이템x)" << endl;
 	}
 }

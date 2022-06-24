@@ -14,23 +14,23 @@ POS tStartpos;
 POS tEndpos;
 PLAYER tPlayer;
 
-void Miro(int &totalScore, int &stage) {
+void Miro(int &totalScore, int &stage, int &score) {
 
 	++stage;
 
 	switch (stage)
 	{
 	case 2:
-		Miro2(totalScore);
+		Miro2(totalScore, score);
 		break;
 	case 3:
-		Miro3(totalScore);
+		Miro3(totalScore, score);
 		break;
 	case 4:
-		Miro4(totalScore);
+		Miro4(totalScore, score);
 		break;
 	case 5:
-		Miro5(totalScore);
+		Miro5(totalScore, score);
 		break;
 	default:
 		break;
@@ -38,7 +38,7 @@ void Miro(int &totalScore, int &stage) {
 
 }
 
-void Miro1(int &totalScore) {
+void Miro1(int &totalScore, int& score) {
 
 	time_t start, end;
 	start = time(NULL);
@@ -58,6 +58,7 @@ void Miro1(int &totalScore) {
 			cout << endl <<"¹Ì·Î Å¬¸®¾î!" << endl;
 			cout << 600 - (int)(end - start) << "Á¡ È¹µæ!" << endl;
 			totalScore += 600 - (int)(end - start);
+			score = 600 - (int)(end - start);
 			break;
 		}
 		char cInput = _getch();
@@ -71,7 +72,7 @@ void Miro1(int &totalScore) {
 	
 }
 
-void Miro2(int& totalScore)
+void Miro2(int& totalScore, int& score)
 {
 	time_t start, end;
 	start = time(NULL);
@@ -90,6 +91,7 @@ void Miro2(int& totalScore)
 			cout << "¹Ì·Î Å¬¸®¾î!" << endl;
 			cout << 600 - (int)(end - start) << "Á¡ È¹µæ!" << endl;
 			totalScore += 600 - (int)(end - start);
+			score = 600 - (int)(end - start);
 			break;
 		}
 		char cInput = _getch();
@@ -99,7 +101,7 @@ void Miro2(int& totalScore)
 	}
 }
 
-void Miro3(int& totalScore) {
+void Miro3(int& totalScore, int &score) {
 
 	time_t start, end;
 	start = time(NULL);
@@ -119,6 +121,7 @@ void Miro3(int& totalScore) {
 			cout << endl << "¹Ì·Î Å¬¸®¾î!" << endl;
 			cout << 600 - (int)(end - start) << "Á¡ È¹µæ!" << endl;
 			totalScore += 600 - (int)(end - start);
+			score = 600 - (int)(end - start);
 			break;
 		}
 		char cInput = _getch();
@@ -133,7 +136,7 @@ void Miro3(int& totalScore) {
 
 }
 
-void Miro4(int& totalScore) {
+void Miro4(int& totalScore, int& score) {
 
 	time_t start, end;
 	start = time(NULL);
@@ -152,6 +155,7 @@ void Miro4(int& totalScore) {
 			cout << endl << "¹Ì·Î Å¬¸®¾î!" << endl;
 			cout << 600 - (int)(end - start) << "Á¡ È¹µæ!" << endl;
 			totalScore += 600 - (int)(end - start);
+			score = 600 - (int)(end - start);
 			break;
 		}
 		char cInput = _getch();
@@ -165,7 +169,7 @@ void Miro4(int& totalScore) {
 
 }
 
-void Miro5(int& totalScore) {
+void Miro5(int& totalScore, int& score) {
 
 	time_t start, end;
 	start = time(NULL);
@@ -184,6 +188,7 @@ void Miro5(int& totalScore) {
 			cout << endl << "¹Ì·Î Å¬¸®¾î!" << endl;
 			cout << 600 - (int)(end - start) << "Á¡ È¹µæ!" << endl;
 			totalScore += 600 - (int)(end - start);
+			score = 600 - (int)(end - start);
 			break;
 		}
 		char cInput = _getch();
@@ -193,6 +198,4 @@ void Miro5(int& totalScore) {
 		}
 		MovePlayer(StrmazeStage5, &tPlayer);
 	}
-
-
 }
